@@ -1,21 +1,29 @@
-NAME = composer
-VERSION = 1.6
+NAME = box-builder
 
-.PHONY: build clean
+VERSIONS = 1.6
 
-build:
-	docker run \
+.PHONY: build
+build: ${VERSIONS}
+
+.PHONY: ${VERSIONS}
+${VERSIONS}:
+	@echo "Build ${@}"
+
+	@docker run \
 		--rm \
 		--volume "$(shell pwd)":/app \
 		finalgene/hadolint \
-		${VERSION}/Dockerfile
+		${@}/Dockerfile
 
-	docker build \
+	@docker build \
 		--no-cache \
-		--tag finalgene/${NAME}:dev \
-		./${VERSION}
+		--tag finalgene/${NAME}:${@}-dev \
+		${@}/
 
+	@docker images finalgene/${NAME}:${@}-dev
+
+.PHONY: clean
 clean:
-	-docker rmi \
+	-@docker rmi \
 		--force \
-		$(shell docker images finalgene/${NAME}:dev -q)
+		$(shell docker images finalgene/${NAME}:*-dev -q)
