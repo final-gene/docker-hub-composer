@@ -1,6 +1,6 @@
 NAME = box-builder
 
-VERSIONS = 1.6 1.7
+VERSIONS = 1.6 1.7 1.8
 
 .PHONY: build
 build: ${VERSIONS}
