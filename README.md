@@ -4,7 +4,8 @@
 This is a image to run [composer](https://getcomposer.org) with the [hirak/prestissimo](https://packagist.org/packages/hirak/prestissimo) package.
 
 ## Supported tags and respective Dockerfile links
-* `1.7`, `latest` [(Dockerfile)](https://github.com/finalgene/docker-hub-composer/blob/master/1.7/Dockerfile)
+* `1.8`, `latest` [(Dockerfile)](https://github.com/finalgene/docker-hub-composer/blob/master/1.8/Dockerfile)
+* `1.7` [(Dockerfile)](https://github.com/finalgene/docker-hub-composer/blob/master/1.7/Dockerfile)
 * `1.6` [(Dockerfile)](https://github.com/finalgene/docker-hub-composer/blob/master/1.6/Dockerfile)
 
 ## How to use this image
