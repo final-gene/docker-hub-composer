@@ -1,4 +1,4 @@
-FROM composer:1.8.5
+FROM composer:1.9.0
 
 LABEL maintainer="frank.giesecke@final-gene.de"
 
